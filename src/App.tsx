@@ -374,7 +374,7 @@ export default function App() {
         <motion.div initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="flex justify-center mb-6">
           <Moon className="w-14 h-14 text-amber-400" />
         </motion.div>
-        <motion.h1 initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="text-4xl md:text-6xl font-bold text-amber-400 mb-4 tracking-tight">
+        <motion.h1 initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="text-3xl sm:text-4xl md:text-6xl font-bold text-amber-400 mb-4 tracking-tight">
           ২০১৫ ব্যাচ এর ইফতার মাহফিল
         </motion.h1>
         <motion.p initial={{ y: 20, opacity: 0 }} transition={{ delay: 0.1 }} animate={{ y: 0, opacity: 1 }} className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-6">
@@ -384,23 +384,27 @@ export default function App() {
           অংশগ্রহণে কয়েকজনের সমস্যা থাকা সত্ত্বেও উক্ত সময়ে মাহফিল সম্পন্ন করার সিদ্ধান্ত গ্রহণ করা হয়েছে। এর জন্য দুঃখ প্রকাশ করছি। দৈনন্দিন ব্যস্ততা এবং জীবিকার জন্য আগের মত আমরা এখন আর মিলিত হতে পারি না। একমাত্র ইফতার মাহফিল যেখানে বছরে একবার সবাই সবার সাথে দেখা করার সুযোগ পাই। তাই আশা করি দৈনন্দিন ব্যস্ততা ও সমস্যা উপেক্ষা করে এরকম একটি অনুষ্ঠানে অংশগ্রহণ করার চেষ্টা করব। ইনশাআল্লাহ।
         </motion.div>
         
-        <motion.div initial={{ y: 20, opacity: 0 }} transition={{ delay: 0.25 }} animate={{ y: 0, opacity: 1 }} className="flex justify-center gap-3 md:gap-4 mb-8">
-          <div className="flex flex-col items-center p-3 md:p-4 bg-slate-800/60 border border-slate-700/50 rounded-2xl min-w-[70px] md:min-w-[90px] shadow-lg">
-            <span className="text-2xl md:text-4xl font-bold text-amber-400 font-mono">{timeLeft.days.toString().padStart(2, '0')}</span>
-            <span className="text-[10px] md:text-xs text-slate-400 uppercase tracking-wider mt-1">দিন</span>
+        <motion.div initial={{ y: 20, opacity: 0 }} transition={{ delay: 0.25 }} animate={{ y: 0, opacity: 1 }} className="mb-8">
+          <p className="text-xl md:text-2xl font-medium text-amber-400 mb-4">আর মাত্র</p>
+          <div className="flex justify-center gap-2 sm:gap-3 md:gap-4 mb-4">
+            <div className="flex flex-col items-center p-2 sm:p-3 md:p-4 bg-slate-800/60 border border-slate-700/50 rounded-2xl min-w-[65px] sm:min-w-[70px] md:min-w-[90px] shadow-lg">
+              <span className="text-xl sm:text-2xl md:text-4xl font-bold text-amber-400 font-mono">{timeLeft.days.toString().padStart(2, '0')}</span>
+              <span className="text-[9px] sm:text-[10px] md:text-xs text-slate-400 uppercase tracking-wider mt-1">দিন</span>
+            </div>
+            <div className="flex flex-col items-center p-2 sm:p-3 md:p-4 bg-slate-800/60 border border-slate-700/50 rounded-2xl min-w-[65px] sm:min-w-[70px] md:min-w-[90px] shadow-lg">
+              <span className="text-xl sm:text-2xl md:text-4xl font-bold text-amber-400 font-mono">{timeLeft.hours.toString().padStart(2, '0')}</span>
+              <span className="text-[9px] sm:text-[10px] md:text-xs text-slate-400 uppercase tracking-wider mt-1">ঘণ্টা</span>
+            </div>
+            <div className="flex flex-col items-center p-2 sm:p-3 md:p-4 bg-slate-800/60 border border-slate-700/50 rounded-2xl min-w-[65px] sm:min-w-[70px] md:min-w-[90px] shadow-lg">
+              <span className="text-xl sm:text-2xl md:text-4xl font-bold text-amber-400 font-mono">{timeLeft.minutes.toString().padStart(2, '0')}</span>
+              <span className="text-[9px] sm:text-[10px] md:text-xs text-slate-400 uppercase tracking-wider mt-1">মিনিট</span>
+            </div>
+            <div className="flex flex-col items-center p-2 sm:p-3 md:p-4 bg-slate-800/60 border border-slate-700/50 rounded-2xl min-w-[65px] sm:min-w-[70px] md:min-w-[90px] shadow-lg">
+              <span className="text-xl sm:text-2xl md:text-4xl font-bold text-amber-400 font-mono">{timeLeft.seconds.toString().padStart(2, '0')}</span>
+              <span className="text-[9px] sm:text-[10px] md:text-xs text-slate-400 uppercase tracking-wider mt-1">সেকেন্ড</span>
+            </div>
           </div>
-          <div className="flex flex-col items-center p-3 md:p-4 bg-slate-800/60 border border-slate-700/50 rounded-2xl min-w-[70px] md:min-w-[90px] shadow-lg">
-            <span className="text-2xl md:text-4xl font-bold text-amber-400 font-mono">{timeLeft.hours.toString().padStart(2, '0')}</span>
-            <span className="text-[10px] md:text-xs text-slate-400 uppercase tracking-wider mt-1">ঘণ্টা</span>
-          </div>
-          <div className="flex flex-col items-center p-3 md:p-4 bg-slate-800/60 border border-slate-700/50 rounded-2xl min-w-[70px] md:min-w-[90px] shadow-lg">
-            <span className="text-2xl md:text-4xl font-bold text-amber-400 font-mono">{timeLeft.minutes.toString().padStart(2, '0')}</span>
-            <span className="text-[10px] md:text-xs text-slate-400 uppercase tracking-wider mt-1">মিনিট</span>
-          </div>
-          <div className="flex flex-col items-center p-3 md:p-4 bg-slate-800/60 border border-slate-700/50 rounded-2xl min-w-[70px] md:min-w-[90px] shadow-lg">
-            <span className="text-2xl md:text-4xl font-bold text-amber-400 font-mono">{timeLeft.seconds.toString().padStart(2, '0')}</span>
-            <span className="text-[10px] md:text-xs text-slate-400 uppercase tracking-wider mt-1">সেকেন্ড</span>
-          </div>
+          <p className="text-xl md:text-2xl font-medium text-amber-400">বাকি আছে।</p>
         </motion.div>
 
         <motion.div initial={{ y: 20, opacity: 0 }} transition={{ delay: 0.3 }} animate={{ y: 0, opacity: 1 }} className="flex justify-center">
@@ -551,34 +555,34 @@ export default function App() {
               )}
 
               {rsvps.map((rsvp) => (
-                <div key={rsvp.id} className="flex items-center justify-between p-4 bg-slate-800/40 rounded-2xl border border-slate-700/30">
+                <div key={rsvp.id} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-slate-800/40 rounded-2xl border border-slate-700/30 gap-3 sm:gap-0">
                   {isEditingRsvp ? (
                     <div className="w-full">
-                      <div className="flex items-center gap-3 w-full">
+                      <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full">
                         <input 
                           type="checkbox" 
                           checked={selectedRsvps.includes(rsvp.id)}
                           onChange={() => toggleSelectRsvp(rsvp.id)}
                           className="w-4 h-4 accent-amber-500 rounded cursor-pointer shrink-0"
                         />
-                        <input type="text" value={rsvp.name} onChange={(e) => setRsvps(rsvps.map(r => r.id === rsvp.id ? {...r, name: e.target.value} : r))} className={`bg-slate-800 border ${isDuplicateName(rsvp.name, rsvp.id) ? 'border-red-500/50 focus:border-red-500' : 'border-slate-700 focus:border-amber-500'} rounded-lg px-2 py-1 text-slate-200 flex-1 focus:outline-none`} />
-                        <select value={rsvp.status} onChange={(e) => setRsvps(rsvps.map(r => r.id === rsvp.id ? {...r, status: e.target.value} : r))} className="bg-slate-800 border border-slate-700 rounded-lg px-2 py-1 text-slate-200 w-28 focus:outline-none focus:border-amber-500">
+                        <input type="text" value={rsvp.name} onChange={(e) => setRsvps(rsvps.map(r => r.id === rsvp.id ? {...r, name: e.target.value} : r))} className={`bg-slate-800 border ${isDuplicateName(rsvp.name, rsvp.id) ? 'border-red-500/50 focus:border-red-500' : 'border-slate-700 focus:border-amber-500'} rounded-lg px-2 py-1 text-slate-200 flex-1 min-w-[120px] focus:outline-none`} />
+                        <select value={rsvp.status} onChange={(e) => setRsvps(rsvps.map(r => r.id === rsvp.id ? {...r, status: e.target.value} : r))} className="bg-slate-800 border border-slate-700 rounded-lg px-2 py-1 text-slate-200 w-auto sm:w-28 focus:outline-none focus:border-amber-500">
                           <option value="going">আসবে</option>
                           <option value="maybe">নিশ্চিত নয়</option>
                         </select>
-                        <button onClick={() => setRsvps(rsvps.filter(r => r.id !== rsvp.id))} className="text-red-400 hover:text-red-300 p-1"><Trash2 className="w-4 h-4" /></button>
+                        <button onClick={() => setRsvps(rsvps.filter(r => r.id !== rsvp.id))} className="text-red-400 hover:text-red-300 p-1 shrink-0"><Trash2 className="w-4 h-4" /></button>
                       </div>
                       {isDuplicateName(rsvp.name, rsvp.id) && (
                         <p className="text-red-400 text-xs mt-2 ml-7">এই নামটি ইতিমধ্যে তালিকায় আছে!</p>
                       )}
                     </div>
                   ) : (
-                    <>
-                      <span className="font-medium text-lg">{rsvp.name}</span>
-                      <span className={`text-sm px-3 py-1 rounded-full font-medium ${rsvp.status === 'going' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-amber-500/10 text-amber-400 border border-amber-500/20'}`}>
+                    <div className="flex items-center justify-between w-full">
+                      <span className="font-medium text-base sm:text-lg break-words flex-1 pr-2">{rsvp.name}</span>
+                      <span className={`text-xs sm:text-sm px-2 sm:px-3 py-1 rounded-full font-medium shrink-0 ${rsvp.status === 'going' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-amber-500/10 text-amber-400 border border-amber-500/20'}`}>
                         {rsvp.status === 'going' ? 'আসবে' : 'নিশ্চিত নয়'}
                       </span>
-                    </>
+                    </div>
                   )}
                 </div>
               ))}
@@ -640,17 +644,17 @@ export default function App() {
             </div>
             <ul className="space-y-4 text-slate-300">
               {menuItems.map((item) => (
-                <li key={item.id} className="flex items-center gap-4 p-3 rounded-2xl hover:bg-slate-800/30 transition-colors">
+                <li key={item.id} className="flex items-center gap-3 sm:gap-4 p-2 sm:p-3 rounded-2xl hover:bg-slate-800/30 transition-colors">
                   {isEditingMenu ? (
                     <div className="flex items-center gap-2 w-full">
-                      <input type="checkbox" checked={item.isDone} onChange={(e) => setMenuItems(menuItems.map(m => m.id === item.id ? {...m, isDone: e.target.checked} : m))} className="w-4 h-4 accent-amber-500" />
-                      <input type="text" value={item.item} onChange={(e) => setMenuItems(menuItems.map(m => m.id === item.id ? {...m, item: e.target.value} : m))} className="bg-slate-800 border border-slate-700 rounded-lg px-2 py-1 text-slate-200 flex-1" placeholder="খাবারের নাম" />
-                      <button onClick={() => setMenuItems(menuItems.filter(m => m.id !== item.id))} className="text-red-400 hover:text-red-300 p-1"><Trash2 className="w-4 h-4" /></button>
+                      <input type="checkbox" checked={item.isDone} onChange={(e) => setMenuItems(menuItems.map(m => m.id === item.id ? {...m, isDone: e.target.checked} : m))} className="w-4 h-4 accent-amber-500 shrink-0" />
+                      <input type="text" value={item.item} onChange={(e) => setMenuItems(menuItems.map(m => m.id === item.id ? {...m, item: e.target.value} : m))} className="bg-slate-800 border border-slate-700 rounded-lg px-2 py-1 text-slate-200 flex-1 min-w-0" placeholder="খাবারের নাম" />
+                      <button onClick={() => setMenuItems(menuItems.filter(m => m.id !== item.id))} className="text-red-400 hover:text-red-300 p-1 shrink-0"><Trash2 className="w-4 h-4" /></button>
                     </div>
                   ) : (
                     <>
-                      <div className={`w-3 h-3 rounded-full ${item.isDone ? 'bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.5)]' : 'bg-slate-600'}`} /> 
-                      <span className={`text-lg ${!item.isDone && 'text-slate-400'}`}>{item.item}</span>
+                      <div className={`w-3 h-3 rounded-full shrink-0 ${item.isDone ? 'bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.5)]' : 'bg-slate-600'}`} /> 
+                      <span className={`text-base sm:text-lg break-words ${!item.isDone && 'text-slate-400'}`}>{item.item}</span>
                     </>
                   )}
                 </li>
@@ -682,12 +686,12 @@ export default function App() {
               {proposedMenuItems.sort((a, b) => b.votes - a.votes).map((item) => {
                 const hasVoted = votedItems.includes(item.id);
                 return (
-                  <li key={item.id} className="flex items-center justify-between p-3 bg-slate-800/40 dark:bg-slate-800/40 rounded-2xl border border-slate-700/30">
-                    <span className="text-lg">{item.item}</span>
-                    <div className="flex items-center gap-3">
+                  <li key={item.id} className="flex items-center justify-between gap-2 p-3 bg-slate-800/40 dark:bg-slate-800/40 rounded-2xl border border-slate-700/30">
+                    <span className="text-base sm:text-lg break-words flex-1">{item.item}</span>
+                    <div className="flex items-center gap-2 sm:gap-3 shrink-0">
                       <button 
                         onClick={() => handleVote(item.id)}
-                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                        className={`flex items-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-colors ${
                           hasVoted 
                             ? 'bg-amber-500/20 text-amber-400 border border-amber-500/30' 
                             : 'bg-slate-700/50 text-slate-400 hover:bg-slate-700 hover:text-slate-200 border border-transparent'
@@ -723,7 +727,7 @@ export default function App() {
               )}
             </ul>
 
-            <form onSubmit={handleProposeItem} className="flex gap-2">
+            <form onSubmit={handleProposeItem} className="flex flex-col sm:flex-row gap-2">
               <input
                 type="text"
                 value={newProposedItem}
@@ -734,7 +738,7 @@ export default function App() {
               <button 
                 type="submit"
                 disabled={!newProposedItem.trim()}
-                className="px-4 py-2 bg-amber-500 hover:bg-amber-600 disabled:opacity-50 disabled:cursor-not-allowed text-slate-950 dark:text-slate-950 font-medium rounded-xl transition-colors flex items-center gap-2"
+                className="px-4 py-2 bg-amber-500 hover:bg-amber-600 disabled:opacity-50 disabled:cursor-not-allowed text-slate-950 dark:text-slate-950 font-medium rounded-xl transition-colors flex items-center justify-center gap-2 shrink-0"
               >
                 <Plus className="w-5 h-5" /> প্রস্তাব
               </button>
